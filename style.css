@@ -1,0 +1,37 @@
+@font-face {
+    font-family: 'MinhaFonte';
+    src: url('fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+    margin: 0;
+    font-family: 'MinhaFonte';
+}
+/*header*/
+.header {
+    background-color: #878787;
+}
+.logotipo {
+    width: 200px;
+}
+/*footer*/
+.footer{
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+}
+.endereco {
+    background-color: #e30613;
+    text-align: center;
+    color: #fff;
+    height: 60px;
+    align-content: center;
+}
+.direitos {
+    background-color: #9a1915;
+    text-align: center;
+    color: #fff;
+    height: 40px;
+    align-content: center;
+}
