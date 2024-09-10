@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav>
+            <img src="https://www.sp.senai.br/images/senai.svg" alt="logo" class="logotipo">
+        </nav>
+    </header>
+    <main>
+        <div class="form">
+            <h1>Cadastro</h1>
+            <form action="/cadastro" method="post">
+                <div class="group1">
+                    <div class="group">
+                        <label name="nome">Nome Completo:</label><br>
+                        <input type="text" id="nome" name="nome" class="input" placeholder="Nome completo" required>
+                    </div>
+                    <div class="group">
+                        <label name="cpf">CPF:</label><br>
+                        <input type="text" id="cpf" name="cpf" class="input" placeholder="CFP" required>
+                    </div>
+                    <div class="group">
+                        <input type="text" id="email" name="email" class="input" placeholder="E-mail" required>
+                    </div>
+                    <div class="group">
+                        <input type="password" id="senha" name="senha" class="input" placeholder="Senha" required>
+                    </div>
+                </div>
+                
+                <div class="group">
+                    <div class="group">
+                        <p class="opcoes">Selecione seu cargo:</p>
+                        <select class="input" name="nivel_acesso">
+                            <option selected value="1">Coordenação
+                            <option selected value="2">Funcionários/professores
+                            <option selected value="3">Técnicos da manutenção
+                        </select>
+                    </div>
+    
+                    <p class="opcoes">Perguntas para recuperação de senha:</p>
+                    <div class="group"></div>
+                        <input type="tel" id="pergunta" name="pergunta1" class="input" placeholder="Número de Telefone" required>
+                    </div>
+                    <div class="group"></div>
+                        <input type="text" id="pergunta" name="pergunta2" class="input" placeholder="Em que cidade você nasceu?" required>
+                    </div>
+    
+                </div>
+                
+                <button type="submit" class="button1" href="/">Cadastrar</button>
+            </form>
+        </div>
+    </main>
+    <footer class="footer">
+        <address>
+            <p class="endereco">Av. Dr. Jaime de Almeida Pinto, 1332 - Jardim Reflorenda, Botucatu - SP, 18605-318</p>
+        </address>
+        <div class="direitos">&copy; Todos os direitos reservados - 2024</div>
+    </footer>
+</body>
+
+</html>

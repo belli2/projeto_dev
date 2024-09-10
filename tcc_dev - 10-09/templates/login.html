@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav>
+            <img src="https://www.sp.senai.br/images/senai.svg" alt="logo" class="logotipo">
+        </nav>
+    </header>
+    <main>
+        <div class="form">
+            <h1>Login</h1>
+
+            <!-- Exibir mensagens de erro ou sucesso -->
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    <ul>
+                        {% for category, message in messages %}
+                            <p class="{{ category }}">{{ message }}</p>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            {% endwith %}
+
+            <form action="/validar-login" method="post">
+                <div class="group">
+                    <input type="text" id="email" name="email" class="input" placeholder="E-mail" required>
+                </div>
+                <div class="group">
+                    <input type="password" id="senha" name="senha" class="input" placeholder="Senha" required>
+                </div>
+                <button type="submit" class="button1">Entrar</button><br>
+                <div class="acesso">
+                    <a class="acesso" href="/esqueci-senha">Esqueci a senha</a><br>
+                </div>
+                <div class="acesso">
+                    <a class="acesso" href="/cadastro">Cadastrar-se</a><br>
+                </div>     
+            </form>
+        </div>
+    </main>
+    <footer class="footer">
+        <address>
+            <p class="endereco">Av. Dr. Jaime de Almeida Pinto, 1332 - Jardim Reflorenda, Botucatu - SP, 18605-318</p>
+        </address>
+        <div class="direitos">&copy; Todos os direitos reservados - 2024</div>
+    </footer>
+</body>
+
+</html>
+

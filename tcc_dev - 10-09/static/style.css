@@ -1,0 +1,136 @@
+/*font*/
+@font-face {
+    font-family: 'MinhaFonte';
+    src: url('fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*tudo*/
+* {
+    margin: 0;
+    font-family: 'MinhaFonte';
+}
+
+/*header*/
+.header {
+    background-color: #878787;
+}
+
+.logotipo {
+    width: 200px;
+}
+
+/*footer*/
+.footer{
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+}
+.endereco {
+    background-color: #e30613;
+    text-align: center;
+    color: #fff;
+    height: 30px;
+    align-content: center;
+    font-size: 10px;
+}
+.direitos {
+    background-color: #9a1915;
+    text-align: center;
+    color: #fff;
+    height: 20px;
+    align-content: center;
+    font-size: 10px;
+}
+
+/*login*/
+.form {
+    height: 390px;
+    width: 500px;
+    align-content: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 5px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: auto; 
+}
+
+.form h1 {
+    margin: 10px;
+    font-size: 20px;
+}
+
+/* .cadastro_front {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.group1 {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1.1rem;
+}
+
+.group2 {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1.1rem;
+} */
+
+.input {
+    padding: 5px;
+    margin: 10px;
+}
+
+.funcao {
+    margin-top: 10px;
+}
+
+.opcoes {
+    margin-top: 10px;
+    padding: 5px;
+
+}
+
+.button1 {
+    width: 20%;
+    padding: 10px;
+    background-color: #e30613;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 10px;
+}
+
+button:hover {
+    background-color: #9a1915;
+}
+
+.acesso {
+    padding: 5px;
+    text-decoration: none;
+    color: #000;
+}
+
+.acesso:hover {
+    color: #e30613;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/*Esquici a senha*/
+.redefinir {
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
