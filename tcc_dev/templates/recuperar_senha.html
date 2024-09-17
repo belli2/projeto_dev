@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Esqueci a senha</title>
+    <title>Perguntas de recuperação</title>
     <link rel="stylesheet" href="/static/style.css">
 </head>
 
@@ -16,13 +16,15 @@
     </header>
     <main>
         <div class="form">
-            <h1>Esqueci a senha</h1>
-            <p class="redefinir">Informe seu E-mail corretamente:</p>
-            <form action="/esqueci-senha" method="post">
+            <h1>Perguntas de recuperação</h1>
+            <p class="redefinir">Insira os seguintes dados corretamente:</p>
+            <form action="#" method="post">
                 <div class="group">
-                    <input type="text" id="email" name="email" class="input" placeholder="E-mail" required><br>
+                    <input type="text" id="email" name="email" class="input" placeholder="CPF" required><br>
+                    <input type="text" id="numero_telefone" name="numero_telefone" class="input" placeholder="Número de Telefone" required><br>
+                    <input type="text" id="cidade" name="cidade" class="input" placeholder="Cidade em que nasceu" required>
                 </div>
-                <button type="submit" class="button1">Próximo</button>
+                <button type="submit" class="button1" href="/mudar_senha">Recuperar</button>
             </form>
         </div>
     </main>

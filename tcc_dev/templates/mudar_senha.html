@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SENAI - Manutenção</title>
+    <title>Nova senha</title>
     <link rel="stylesheet" href="/static/style.css">
 </head>
+
 <body>
     <header class="header">
         <nav>
-            <div class="div">
-                <div class="caixa1">
-                    <img src="https://www.sp.senai.br/images/senai.svg" alt="logo" class="logotipo">
-                </div>
-                <div class="caixa2">
-                    <a id="button4" href='/fazer_pedido'>Fazer pedido</a>
-                </div>
-            </div>
+            <img src="https://www.sp.senai.br/images/senai.svg" alt="logo" class="logotipo">
         </nav>
     </header>
     <main>
-        <h1>2 - funcionários/professores</h1>
+        <div class="form">
+            <h1>Nova senha</h1>
+            <p class="redefinir">Insira sua nova senha:</p>
+            <form action="#" method="post">
+                <div class="group">
+                    <input type="text" id="numero_telefone" name="numero_telefone" class="input" placeholder="Nova senha" required>
+                </div>
+                <button type="submit" class="button1" href="/">Pronto!</button>
+            </form>
+        </div>
     </main>
     <footer class="footer">
         <address>
@@ -29,4 +33,5 @@
         <div class="direitos">&copy; Todos os direitos reservados - 2024</div>
     </footer>
 </body>
+
 </html>
