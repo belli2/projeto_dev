@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fazer pedido</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav>
+            <img src="https://www.sp.senai.br/images/senai.svg" alt="logo" class="logotipo">
+        </nav>
+    </header>
+    <main>
+        <div class="form">
+            <h1>Fazer pedido</h1>
+            <form action="/fazer_pedido" method="post" enctype="multipart/form-data">
+                <div class="group">
+                    <input type="date" id="data" name="data" class="input2" placeholder="Data de solicitação" required>
+                </div>
+                <div class="group">
+                    <textarea type="text" id="descricao" name="descricao" rows="5" cols="33" placeholder="Descrição" required></textarea>
+                </div>
+                <div class="group">
+                    <input type="text" id="local" name="local" class="input2" placeholder="Local" required>
+                </div>
+                <div class="imagem">
+                    <label for="imagem">Adicione uma imagem (opicional):</label><br>
+                    <input type="file" id="imagem" name="imagem" class="input2" placeholder="Local" accept="image/*">
+                </div>
+                <button onclick="myFunction()" type="submit" class="button1">Pronto</button>
+            </form>
+        </div>
+    </main>
+    <footer class="footer">
+        <address>
+            <p class="endereco">Av. Dr. Jaime de Almeida Pinto, 1332 - Jardim Reflorenda, Botucatu - SP, 18605-318</p>
+        </address>
+        <div class="direitos">&copy; Todos os direitos reservados - 2024</div>
+    </footer>
+    <script>
+        function myFunction() {
+          alert("Alerta");
+        }
+    </script>
+</body>
+
+</html>

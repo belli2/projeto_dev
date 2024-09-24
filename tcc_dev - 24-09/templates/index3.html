@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SENAI - Manutenção</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav>
+            <img src="https://www.sp.senai.br/images/senai.svg" alt="logo" class="logotipo">
+        </nav>
+    </header>
+    <main>
+        <h1>Tarefas solicitadas:</h1>
+        <button id="openModal">Abrir modal</button>
+        <dialog id="myModal">
+            <h2>Título</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci voluptatem saepe ad exercitationem
+                repudiandae eum nemo quidem ipsum? In doloremque repellat non minima tempora corporis molestias veniam
+                blanditiis officiis id!</p>
+            <button id="closeModal">Fechar</button>
+        </dialog>
+        <script>
+            const button = document.getElementById("openModal");
+            const modal = document.getElementById("myModal");
+            const buttonClose = document.getElementById("closeModal");
+
+            button.onclick = function () {
+                modal.show();
+            };
+
+            buttonClose.onclick = function () {
+                modal.close();
+            };
+        </script>
+
+        <div class="caixa_tabela">
+            <table class="tabela">
+                <thead>
+                    <tr>
+                        <th>Data</th>
+                        <th>Descrição</th>
+                        <th>Local</th>
+                        <th>Prioridade</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    {% for ordem in ordens %}
+                    <tr>
+                        <td>{{ ordem[0] }}</td>
+                        <td>{{ ordem[1] }}</td>
+                        <td>{{ ordem[2] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+    </main>
+    <footer class="footer3">
+        <address>
+            <p class="endereco">Av. Dr. Jaime de Almeida Pinto, 1332 - Jardim Reflorenda, Botucatu - SP, 18605-318</p>
+        </address>
+        <div class="direitos">&copy; Todos os direitos reservados - 2024</div>
+    </footer>
+</body>
+
+</html>

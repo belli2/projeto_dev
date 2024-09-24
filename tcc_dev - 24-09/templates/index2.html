@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SENAI - Manutenção</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav>
+            <div class="div">
+                <div class="caixa1">
+                    <img src="https://www.sp.senai.br/images/senai.svg" alt="logo" class="logotipo">
+                </div>
+                <div class="caixa2">
+                    <a id="button4" href='/fazer_pedido'>Fazer pedido</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="mensagem">
+            <!-- Exibir mensagens de erro ou sucesso -->
+            {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+            <ul>
+                {% for category, message in messages %}
+                <p class="{{ category }}">{{ message }}</p>
+                {% endfor %}
+            </ul>
+            {% endif %}
+            {% endwith %}
+        </div>
+        <div class="caixa_tabela"></div>
+        <table class="tabela">
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Descrição</th>
+                    <th>Local</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for ordem in ordens %}
+                <tr>
+                    <td>{{ ordem[0] }}</td>
+                    <td>{{ ordem[1] }}</td>
+                    <td>{{ ordem[2] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        </div>
+
+    </main>
+    <footer class="footer2">
+        <address>
+            <p class="endereco">Av. Dr. Jaime de Almeida Pinto, 1332 - Jardim Reflorenda, Botucatu - SP, 18605-318</p>
+        </address>
+        <div class="direitos">&copy; Todos os direitos reservados - 2024</div>
+    </footer>
+</body>
+
+</html>
