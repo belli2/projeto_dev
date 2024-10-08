@@ -1,0 +1,30 @@
+<div class="opcoes">
+                    <select class="input" name="fundamento">
+                        <option selected value="primeiro">Coordenação
+                        <option selected value="segundo">Funcionários/professores
+                        <option selected value="terceiro">Técnicos da manutenção
+                    </select>
+                </div>
+                <button type="submit" class="button1" onclick="redirecionar()">Cadastrar</button>
+                <script>
+                    function redirecionar(){
+                        window.location.href="/login.html";
+                    }
+                </script>
+
+
+<div class="group">
+                    <p class="input">Selecione seu cargo:</p>
+                    <label for="coordenacao">
+                        <input type="radio" value="coordenacao" id="coordenacao" name="radio-group">
+                    Coordenação
+                    </label><br>
+                    <label for="usuarios">
+                        <input type="radio" value="usuarios" id="usuarios" name="radio-group">
+                    Funcionários/professores
+                    </label><br>
+                    <label for="manutencao">
+                        <input type="radio" value="manutencao" id="manutencao" name="radio-group">
+                    Manutenção
+                    </label><br>
+                </div>
