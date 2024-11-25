@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SENAI - Manutenção</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="div">
+            <div class="caixa1">
+                <img src="/static/img/senai_logo.svg" alt="logo" class="logotipo">
+            </div>
+            <div class="caixa2">
+                <a class="button4" href='/fazer_pedido'>Fazer pedido</a>
+                <div class="tooltip">
+                    <a href="{{ url_for('logout') }}">
+                        <img src="static/img/botao.png" alt="sair" class="sair">
+                    </a>
+                    <span class="tooltiptext">Sair</span>
+                </div>
+            </div>
+            <!-- <div class="caixa3">
+               
+            </div> -->
+        </div>
+    </header>
+    <main>
+        <!-- <div class="mensagem">
+            Exibir mensagens de erro ou sucesso
+            {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+            <ul>
+                {% for category, message in messages %}
+                <p class="{{ category }}">{{ message }}</p>
+                {% endfor %}
+            </ul>
+            {% endif %}
+            {% endwith %}
+        </div> -->
+        <div class="mensagem2">
+            <!-- Exibir mensagens de erro ou sucesso -->
+            {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+            <ul>
+                {% for category, message in messages %}
+                <p class="flash {{ category }}">{{ message }}</p>
+                {% endfor %}
+            </ul>
+            {% endif %}
+            {% endwith %}
+        </div>
+        <div class="div_tabela">
+            <div>
+                <h2 class="titulo">Lista de tarefas </h2><br>
+            </div>
+            <form action="salvar-prioridade" method="post">
+                <div class="caixa_tabela">
+                    <table class="tabela">
+                        <thead>
+                            <tr>
+                                <th>Data</th>
+                                <th>Descrição</th>
+                                <th>Local</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            {% for ordem in ordens %}
+                            <tr>
+                                <td>{{ ordem[1] }}</td>
+                                <td>{{ ordem[2] }}</td>
+                                <td>{{ ordem[3] }}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table><br>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer class="footer2">
+        <address>
+            <p class="endereco">Av. Dr. Jaime de Almeida Pinto, 1332 - Jardim Reflorenda, Botucatu - SP, 18605-318</p>
+        </address>
+        <div class="direitos">&copy; Todos os direitos reservados - 2024</div>
+    </footer>
+
+    <!-- JavaScript to hide the flash message after a few seconds -->
+    <script>
+        // Set the flash message to disappear after 5 seconds (5000 milliseconds)
+        setTimeout(function () {
+            var flashMessage = document.querySelector('.flash');
+            if (flashMessage) {
+                flashMessage.style.display = 'none';
+            }
+        }, 5000); // 5 seconds
+    </script>
+</body>
+
+</html>
