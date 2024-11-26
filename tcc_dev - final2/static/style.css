@@ -1,0 +1,506 @@
+/*font*/
+@font-face {
+    font-family: 'MinhaFonte';
+    src: url('fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*tudo*/
+* {
+    margin: 0;
+    font-family: 'MinhaFonte', arial;
+    /* overflow: auto; */
+}
+
+/*body*/
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/*header*/
+.header {
+    background-color: #878787;
+}
+
+.logotipo {
+    width: 200px;
+    cursor: pointer;
+}
+
+.sair {
+    width: 40px;
+    margin-right: 20px; /* Mantém o espaço da margem */
+    cursor: pointer;
+}
+
+/*main*/
+.main2 {
+    flex: 1;
+    align-items: center;
+    display: flex;
+    /* min-height: 100vh; */
+}
+
+
+/*footer*/
+.footer {
+    /* bottom: 0;
+    position: absolute; */
+    width: 100%;
+}
+
+.footer2 {
+    width: 100%;
+}
+
+.endereco {
+    background-color: #e30613;
+    text-align: center;
+    color: #fff;
+    height: 30px;
+    align-content: center;
+    font-size: 10px;
+}
+
+.direitos {
+    background-color: #9a1915;
+    text-align: center;
+    color: #fff;
+    height: 20px;
+    align-content: center;
+    font-size: 10px;
+}
+
+/*login*/
+.form {
+    height: 390px;
+    width: 600px;
+    align-content: center;
+    justify-content: center;
+    margin: auto;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* overflow: auto; */
+}
+
+.form h1 {
+    margin: 4px;
+    font-size: 20px;
+}
+
+.mensagem {
+    margin-right: 35px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.mensagem2 {
+    margin-top: 10px;
+    margin-right: 35px;
+    margin-bottom: 5px;
+    text-align: center;
+    color: #e30613;
+}
+
+.input {
+    padding: 5px;
+    margin: 10px;
+}
+
+.funcao {
+    margin-top: 10px;
+}
+
+.opcoes {
+    margin-top: 10px;
+    padding: 5px;
+    font-weight: lighter;
+}
+
+.button1 {
+    width: 100px;
+    padding: 10px;
+    background-color: #e30613;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 10px;
+}
+
+button:hover {
+    background-color: #9a1915;
+}
+
+.acesso {
+    padding: 5px;
+    text-decoration: none;
+    color: #000;
+}
+
+.acesso:hover {
+    color: #e30613;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/*Esqueci a senha*/
+.redefinir {
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/*cadastro*/
+.caixa_grande {
+    display: flex;
+}
+
+.box1 {
+    width: 50%;
+    float: left;
+    margin-top: 20px;
+}
+
+.box2 {
+    width: 50%;
+    float: right;
+}
+
+.button2 {
+    width: 100px;
+    padding: 10px;
+    background-color: #e30613;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 10px;
+}
+
+/*index 1*/
+.alta {
+    background-color: red;
+    color: white;
+}
+
+.media {
+    background-color: orange;
+    color: white;
+}
+
+.baixa {
+    background-color: green;
+    color: white;
+}
+
+.div_tabela {
+    align-items: center;
+    justify-content: center;
+}
+
+.caixa3 {
+    display: flex;
+    justify-content: flex-end; /* Alinha o botão à direita */
+    align-items: center; /* Centraliza verticalmente */
+    width: auto;
+    margin-left: auto; /* Empurra o botão para o lado direito */
+}
+
+/*index 2*/
+.div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.caixa1 {
+    float: left;
+}
+
+.caixa2 {
+    display: flex;
+    align-items: center;
+}
+
+.button3 {
+    width: 150px;
+    padding: 10px;
+    background-color: #e30613;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 10px;
+}
+
+.button4 {
+    padding: 8px;
+    background-color: #e30613;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+.button4:hover {
+    background-color: #9a1915;
+}
+
+/*index 3*/
+dialog::backdrop {
+    background-color: #000;
+}
+
+dialog {
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.3);
+    width: 80%;
+}
+
+/*fazer pedido e editar pedido*/
+
+/* Decoração do cabeçalho dos editar_pedido, fazer_pedido e abrir_pedido */
+.x{
+    text-decoration: none;
+}
+.caixa4{
+    display: flex;
+    align-items: center;
+    margin-left: 24%;
+}
+.caixa5{
+    display: flex;
+    margin-right: 2%;
+    align-items: center;
+}
+.caixa6{
+    display: flex;
+    align-items: center;
+    margin-left: 17%;
+}
+.caixa7{
+    display: flex;
+    align-items: center;
+    margin-left: 38%;
+}
+
+/* fim  */
+
+.input2 {
+    padding: 5px;
+    margin: 10px;
+    width: 250px;
+}
+
+.imagem {
+    margin-top: 10px;
+}
+
+.form-editar {
+    width: 600px;
+    align-content: center;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 50px;
+    margin-top: 30px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* overflow: auto; */
+}
+  
+/*Index1*/
+.titulo {
+    text-align: center;
+    margin: 10px;
+}
+.tabela {
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+    overflow-x: auto;
+}
+
+.caixa_tabela {
+   text-align: center;
+   display: flex;
+   justify-content: center;
+ 
+}
+
+th, td {
+    border: 1px solid #000;
+    padding: 10px;
+    text-align: center;
+    max-width: 400px;
+    max-height: 300px;
+}
+
+.botaoEditar {
+    padding: 5px;
+    text-decoration: none;
+    color: #e30613;
+}
+
+.botaoEditar:hover {
+    color: #9a1915;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* Responsividade para tablets (768px a 1024px) */
+@media screen and (max-width: 1024px) {
+    main {
+        /* min-height: 100vh; */
+        align-items: center;
+        flex: 1;
+    }
+    .form {
+        width: 80%;
+    }
+    .logotipo {
+        width: 150px;
+    }
+    .button1, .button2, .button3, .button4 {
+        width: auto;
+        padding: 10px 20px;
+        font-size: 16px;
+        text-align: center;
+    }
+    .input {
+        width: 50%;
+    }
+    .box1, .box2 {
+        width: 100%;
+        float: none;
+        margin-bottom: 10px;
+    }
+    .tabela th, .tabela td {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .tabela2 th, .tabela2 td {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
+
+/* Responsividade para smartphones (máximo de 500px) */
+@media screen and (max-width: 500px) {
+    main {
+        /* min-height: 100vh; */
+        align-items: center;
+        flex: 1;
+    }
+    .form {
+        width: 95%;
+        height: 70%;
+    }
+    .logotipo {
+        width: 120px;
+    }
+    .input {
+        width: 80%;
+    }
+    /* Empilhamento das caixas para smartphone */
+    .caixa_grande {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .box1, .box2 {
+        width: 100%;
+        float: none;
+        margin-bottom: 10px;
+    }
+    .footer {
+        font-size: 8px;
+    }
+    .endereco, .direitos {
+        font-size: 8px;
+    }
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .tabela {
+        width: 95%;
+    }
+
+    .tabela th, .tabela td {
+        padding: 6px;
+        font-size: 12px;
+    }
+
+    .tabela2 {
+        width: 95%;
+    }
+
+    .tabela2 th, .tabela2 td {
+        padding: 6px;
+        font-size: 12px;
+    }
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 80px;
+    background-color: #e30615c3;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: -80%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.prioridade-alta {
+    background-color: #f67280;
+}
+
+.prioridade-media {
+    background-color: #ffeb99;
+}
+
+.prioridade-baixa {
+    background-color: #9eccfa;
+}
+
+.status-andamento {
+    background-color: #d9eaf8;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Pedido</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body class="body-editar">
+    <header class="header">
+        <nav>
+            <a href="/index3">
+                <img src="/static/img/senai_logo.svg" alt="logo" class="logotipo">
+            </a>
+        </nav>
+    </header>
+    <main class="main2">
+        <div class="form-editar">
+            <div class="div">
+                <div class="caixa6"><h1>Visualizar pedido</h1></div>
+                <div class="caixa5"> <a href="/index3"  class="x">X</a></div>
+               
+            </div>
+            <form action="/abrir-pedido" method="post" enctype="multipart/form-data">
+                <input type="hidden" id="idOrdemManutencao" name="idOrdemManutencao" class="input2"
+                    value="{{ ordem[0] }}" readonly>
+                <div class="group">
+                    <input class="input2" type="date" id="data" name="data" rows="1" cols="33" value="{{ ordem[1] }}"
+                        required readonly>
+                </div>
+                <div class="group">
+                    <textarea class="input2" type="text" id="descricao" name="descricao" rows="5" cols="33" readonly
+                        required>{{ ordem[2] }}</textarea>
+                </div>
+                <div class="group">
+                    <textarea class="input2" type="text" id="local" name="local" rows="1" cols="33" readonly
+                        required>{{ ordem[3] }}</textarea>
+                </div>
+                <div class="imagem">
+                    {% if imagem %}
+                    <img src="{{ imagem }}" alt="Imagem do pedido" style="max-width: 100%; height: auto;">
+                    {% else %}
+                    <p>Nenhuma imagem disponível.</p>
+                    {% endif %}
+                </div>
+                <div class="group">
+                    <p class="opcoes">Prioridade:</p>
+                    <div name="prioridade">
+                        {% if ordem[4] == 1 %}
+                            <p>Alta</p>
+                        {% elif ordem[4] == 2 %}
+                            <p>Média</p>
+                        {% elif ordem[4] == 3 %}
+                            <p>Baixa</p>
+                        {% else %}
+                            <p>Prioridade não definida...</p>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="group">
+                    <p class="opcoes">Status:</p>
+                    <select class="input" name="status">
+                        <option value="0" {% if ordem[5]==0 %}selected{% endif %}>Não iniciada</option>
+                        <option value="1" {% if ordem[5]==1 %}selected{% endif %}>Em andamento</option>
+                        <option value="2" {% if ordem[5]==2 %}selected{% endif %}>Concluída</option>
+                    </select>
+                </div>
+                <button type="submit" class="button1">Pronto</button>
+            </form>
+    </main>
+    <footer id="footer-editar" class="footer">
+        <address>
+            <p class="endereco">Av. Dr. Jaime de Almeida Pinto, 1332 - Jardim Reflorenda, Botucatu - SP, 18605-318</p>
+        </address>
+        <div class="direitos">&copy; Todos os direitos reservados - 2024</div>
+    </footer>
+</body>
+
+</html>
